@@ -1,0 +1,31 @@
+<div class="justify-content-center">
+  <video
+    #target
+    class="video-js"
+    controls
+    muted
+    playsinline
+    preload="none"
+    style="object-fit: cover"
+    width="774px"
+    height="400.75px"
+  >
+    <source [src]="videoLink" type="video/mp4" />
+  </video>
+</div>
+
+<div class="container">
+  <div class="specific-width">
+    <div class="justify-content-between">
+      <a *ngIf="!isPlay" href="#" class="player" (click)="btnPlay()"
+        ><fa-icon [icon]="faPlay"></fa-icon> Play</a
+      >
+      <a *ngIf="isPlay" href="#" class="player" (click)="btnPause()"
+        ><fa-icon [icon]="faPause"></fa-icon> Pause</a
+      >
+      <a href="#" class="player" (click)="btnReplay()"
+        ><fa-icon [icon]="faRotateLeft"></fa-icon
+      ></a>
+    </div>
+  </div>
+</div>
